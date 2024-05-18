@@ -20,4 +20,6 @@ def sort_unique_elements(str_list: Tuple[str]) -> List[str]:
             a.append(i)
     a.sort()
     return a
+
+print(sort_unique_elements(('red', 'white', 'black', 'red', 'green', 'black'))) # ['black', 'green', 'red', 'white']
     

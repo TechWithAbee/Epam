@@ -11,3 +11,6 @@ from typing import Tuple
 
 def get_tuple(num: int) -> Tuple[int]:
     return tuple(map(int, str(num)))
+
+num = 87178291199
+print(get_tuple(num)) # (8, 7, 1, 7, 8, 2, 9, 1, 1, 9, 9)

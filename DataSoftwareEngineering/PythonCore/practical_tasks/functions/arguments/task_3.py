@@ -21,4 +21,8 @@ def intersect(*args) -> set:
     for arg in args[1:]:
         result &= set(arg)
     return result
+
+# Test the functions
+print(union(('S', 'A', 'M'), ['S', 'P', 'A', 'C'])) # {'S', 'P', 'A', 'M', 'C'}
+print(intersect(('S', 'A', 'C'), ('P', 'C', 'S'), ('G', 'H', 'S', 'C'))) # {'S', 'C'}
     

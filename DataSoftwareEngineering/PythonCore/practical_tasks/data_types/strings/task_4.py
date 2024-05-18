@@ -11,12 +11,14 @@
 # A man, a plan, a canal — Panama!
 # List of well-known English palindromic phrases [https://en.wikipedia.org/wiki/List_of_English_palindromic_phrases]
 
-def check_str(s: str):
+def check_str(s: str) -> bool:
     a = ""
     s = s.lower()
     for i in s:
         if 97 <= ord(i) <= 122:
             a += i
-        if 48 <= ord(i) <= 57:
-            return s == s[::-1]
-    return a == a[::-1]
+    return a == a[::-1] # racecar == racecar
+
+s = 'A dog! A panic in a pagoda'
+a = check_str(s)
+print(a) #

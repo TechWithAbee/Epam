@@ -69,6 +69,7 @@ def test_query():
         field_filter(*('sport', *('Basketball', 'volleyball'))),
         field_filter(*('gender', *('male',))),
     )
+    print('value:', value)
     assert [{'gender': 'male', 'name': 'Sam', 'sport': 'Basketball'}] == value
 
 

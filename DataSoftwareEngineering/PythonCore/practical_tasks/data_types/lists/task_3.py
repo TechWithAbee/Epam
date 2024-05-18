@@ -15,10 +15,14 @@ from typing import List
 
 def foo(nums: List[int]) -> List[int]:
     a = []
-    for i in range(0, len(nums)):
+    for i in range(0, len(nums)): # [1, 2, 3, 4, 5]
         k = 1
-        for j in range(0, len(nums)):
+        for j in range(0, len(nums)): # [1, 2, 3, 4, 5] = 120
             k *= nums[j]
-        k /= nums[i]
+        # k = 120
+        k /= nums[i] # 40
         a.append(int(k))
     return a
+
+# Test the function
+print(foo([1, 2, 3, 4, 5])) # [120, 60, 40, 30, 24]

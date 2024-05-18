@@ -17,3 +17,6 @@ def generate_squares(num: int)-> Dict[int, int]:
     for i in range(1, num+1):
         my_dict[i] = i**2
     return my_dict
+
+# Test the function
+print(generate_squares(5)) # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}

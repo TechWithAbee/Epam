@@ -9,10 +9,9 @@ from typing import Union, List
 
 ListType = List[Union[int, str]]
 
-
 def get_fizzbuzz_list(n: int) -> ListType:
     a = []
-    for i in range(1, n + 1):
+    for i in range(1, n+1): # n=9, i=1,2,3,4,5,6,7,8, 9
         if i % 3 == 0 and i % 5 == 0:
             a.append("FizzBuzz")
         elif i % 3 == 0:
@@ -22,3 +21,6 @@ def get_fizzbuzz_list(n: int) -> ListType:
         else:
             a.append(i)
     return a
+
+# Test the function
+print(get_fizzbuzz_list(15)) # [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz']

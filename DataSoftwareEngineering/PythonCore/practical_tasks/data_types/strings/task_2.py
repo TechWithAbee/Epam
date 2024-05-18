@@ -10,10 +10,13 @@
 
 def get_longest_word(s: str) -> str:
     w = ""
-    g = 0
-    s = s.split()
-    for i in s:
-        if g < len(i):
-            g = len(i)
-            w = i
+    g = 0 # we will store the length of the longest word here
+    list_words = s.split() # ['Python', 'is', 'simple', 'and', 'effective!']
+    for word in list_words:
+        if g < len(word):
+            g = len(word)
+            w = word
     return w
+
+s = 'Python is simple and effective!'
+print(get_longest_word(s)) # 'effective!'

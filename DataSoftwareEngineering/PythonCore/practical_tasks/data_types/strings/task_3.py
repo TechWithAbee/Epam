@@ -3,7 +3,7 @@
 
 def replacer(s: str) -> str:
     a = ""
-    for i in s:
+    for i in s: # I "a\'m"
         if i == '"':
             a += "'"
         elif i == "'":
@@ -11,3 +11,7 @@ def replacer(s: str) -> str:
         else:
             a += i
     return a
+
+s = 'I "a\'m" '
+a = replacer(s)
+print(a) # I am '
