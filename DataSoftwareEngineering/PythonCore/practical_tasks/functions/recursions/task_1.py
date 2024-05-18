@@ -20,9 +20,14 @@ def seq_sum(sequence: Union[List, Tuple]) -> int:
     Add your code here or call it from here   
     """
     total = 0
-    for item in sequence:
-        if isinstance(item, (list, tuple)):
-            total += seq_sum(item)
+    for item in sequence: # [1,2,3,[4,5, (6,7)]]
+        if isinstance(item, (list, tuple)): # (6,7)
+            total += seq_sum(item) # [4,5, (6,7)]
         else:
-            total += item
+            total += item # 0+1=1
     return total
+
+# Test the function
+sequence = [1,2,3,[4,5, (6,7)]]
+
+print(seq_sum(sequence)) # 28
