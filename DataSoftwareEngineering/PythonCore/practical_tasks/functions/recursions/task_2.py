@@ -18,9 +18,14 @@ def linear_seq(sequence: List[Any]) -> List[Any]:
     Add your code here or call it from here   
     """
     total = []
-    for item in sequence:
+    for item in sequence: # [1,2,3,[4,5, (6,7)]]
         if isinstance(item, (list, tuple)):
             total.extend(linear_seq(item))
         else:
             total.append(item)
     return total
+
+# Test the function
+sequence = [1,2,3,[4,5, (6,7)]]
+
+print(linear_seq(sequence)) # [1,2,3,4,5,6,7]
