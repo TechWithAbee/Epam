@@ -1,7 +1,11 @@
 # Implement a Pagination class helpful to arrange text on pages and list content on the given page.
-# The class should take in a text and a positive integer which indicate how many symbols will be allowed per page (take spaces into account as well).
-# You need to be able to get the number of whole symbols in the text, get the number of pages that came out and the method that accepts the page number, and return the number of symbols on this page. If the provided number of the page is missing raise exception with message "Invalid index. Page is missing".
-# Implement searching/filtering pages by symbols/words and displaying pages with all the symbols on it. If the provided symbols/words are missing raise exception with message "'<symbol/word>' is missing on the pages".
+# The class should take in a text and a positive integer which indicate 
+# how many symbols will be allowed per page (take spaces into account as well).
+# You need to be able to get the number of whole symbols in the text, 
+# get the number of pages that came out and the method that accepts the page number, 
+# and return the number of symbols on this page. If the provided number of the page is missing raise exception with message "Invalid index. Page is missing".
+# Implement searching/filtering pages by symbols/words and displaying pages with all the symbols on it. 
+# If the provided symbols/words are missing raise exception with message "'<symbol/word>' is missing on the pages".
 # If you're querying by symbol that appears on many pages or if you are querying by the word that is splitted in two return an array of all the occurences.
 # Pages indexing starts with 0.
 # Example:
@@ -86,21 +90,26 @@ class Pagination:
     
 
 pages = Pagination('Your beautiful text', 5)
-pages.page_count
+print(pages.page_count)
 
-pages.item_count
-pages.count_items_on_page(0)
+print(pages.item_count)
 
-pages.count_items_on_page(3)
+print(pages.count_items_on_page(0))
 
-pages.count_items_on_page(4)
+print(pages.count_items_on_page(3))
 
-pages.find_page('Your')
+print(pages.count_items_on_page(2))
 
-pages.find_page('e')
+print(pages.find_page('Your'))
 
-pages.find_page('beautiful')
+print(pages.find_page('e'))
 
-pages.find_page('great')
+print(pages.find_page('beautiful'))
 
-pages.display_page(0)
+# print(pages.find_page('great'))
+
+for i in range(pages.page_count):
+    print(pages.display_page(i), end="")
+
+print('\n')
+print(pages.display_page(3))

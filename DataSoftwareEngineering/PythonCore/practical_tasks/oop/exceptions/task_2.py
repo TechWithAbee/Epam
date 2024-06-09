@@ -33,3 +33,8 @@ def divide(str_with_ints: str) -> Union[float, str]:
         return "Error code: division by zero"
     except ValueError as e:
         return f"Error code: {e}"
+
+# Tests
+print(divide("4 2"))  # 2.0
+
+print(divide("4 0"))  # Error code: division by zero

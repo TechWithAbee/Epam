@@ -84,3 +84,17 @@ class SuperBird(FlyingBird, NonFlyingBird):
     
     def __str__(self):
         return f"{self.name} bird can walk, swim and fly"
+
+b = Bird("Any")
+print(b.walk())
+
+p = NonFlyingBird("Penguin", "fish")
+print(p.swim())
+# print(p.fly())
+print(p.walk())
+
+c = FlyingBird("Canary")
+print(c.fly())
+
+s = SuperBird("Gull")
+print(s.swim())
