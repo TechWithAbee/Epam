@@ -23,3 +23,9 @@ class TempDir:
     def __exit__(self, exc_type, exc_val, exc_tb):
         os.chdir(self.original_dir)
         shutil.rmtree(self.temp_dir)
+
+# example
+with TempDir() as tmp:
+    with open("test.txt", "w") as f:
+        f.write("Hello, world!")
+    print(os.getcwd()) # /path/to/your/temporary/directory

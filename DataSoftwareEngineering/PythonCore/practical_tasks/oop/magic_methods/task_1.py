@@ -23,3 +23,7 @@ class Counter:
         for i in self.values:
             new_list.append(str(i) + " " + string)
         return new_list
+
+# example
+
+print(Counter([1, 2, 3]) + "mississippi") # ["1 mississippi", "2 mississippi" , "3 mississippi"]

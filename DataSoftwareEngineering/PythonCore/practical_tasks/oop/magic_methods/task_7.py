@@ -55,9 +55,19 @@ class LogFile(ContextDecorator):
             f"An error occurred: {error_message}\n"
         )
         
+        print(log_message)
+        
         with open(self.log_file_name, 'a') as log_file:
             log_file.write(log_message)
         
         # Reraise the exception if one occurred
         if exc_type:
             return False  # This will re-raise the exception
+        
+
+@LogFile('my_trace.log')
+def some_func():
+    # print(1/0)
+    print("Hello, World!")
+
+some_func()

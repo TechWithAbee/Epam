@@ -21,9 +21,14 @@ class Cd:
     def __enter__(self):
         # Save the current working directory
         self.original_path = os.getcwd()
+        print(self.original_path)
         # Change to the new directory
         os.chdir(self.new_path)
     
     def __exit__(self, exc_type, exc_val, exc_tb):
         # Change back to the original directory
         os.chdir(self.original_path)
+
+# example
+with Cd('/home'):
+    print(os.getcwd()) # /home
